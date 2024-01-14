@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import AddUser from "./AddUser/AddUser";
-import UserList from "./UserList/UserList";
+import AddUser from "./Users/AddUser";
+import UserList from "./Users/UserList";
 
 const Site = () => {
   const [userArrayData, setUserArrayData] = useState([]);
