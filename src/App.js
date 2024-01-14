@@ -1,12 +1,8 @@
-import React from 'react';
-
+import React from "react";
+import Site from "./components/Site";
 
 function App() {
-  return (
-    <div>
-
-    </div>
-  );
+  return <Site />;
 }
 
 export default App;
