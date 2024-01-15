@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import AddUser from "./Users/AddUser";
-import UserList from "./Users/UserList";
+import UsersList from "./Users/UsersList";
 
 const Site = () => {
   const [userArrayData, setUserArrayData] = useState([]);
@@ -12,7 +12,7 @@ const Site = () => {
     <div>
       <div>
         <AddUser onSaveUserData={saveUserData} />
-        {userArrayData.length > 0 && <UserList userDatas={userArrayData} />}
+        {userArrayData.length > 0 && <UsersList users={userArrayData} />}
       </div>
     </div>
   );
