@@ -4,15 +4,17 @@ import AddUser from "./Users/AddUser";
 import UsersList from "./Users/UsersList";
 
 const Site = () => {
-  const [userArrayData, setUserArrayData] = useState([]);
-  const saveUserData = (userJsonData) => {
-    setUserArrayData([userJsonData, ...userArrayData]);
+  const [usersList, setUsersList] = useState([]);
+  const addUserHandler = (userData) => {
+    setUsersList((prevUserList) => {
+      return [...prevUserList, userData];
+    });
   };
   return (
     <div>
       <div>
-        <AddUser onSaveUserData={saveUserData} />
-        {userArrayData.length > 0 && <UsersList users={userArrayData} />}
+        <AddUser onAddUser={addUserHandler} />
+        {usersList.length > 0 && <UsersList users={usersList} />}
       </div>
     </div>
   );
